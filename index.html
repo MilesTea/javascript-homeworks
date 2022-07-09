@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write('Hello, world!');
+        console.log('Hello, developers!');
+        const max = 1000
+        let n = Math.floor(Math.random() * max);
+        console.log(`number: ${n}`);
+        let i = 0
+        while (true) {
+            i++;
+            guess = prompt(`Загадано число от 0 до ${max - 1}, попробуйте его угадать!`)
+            if (isNaN(guess)) {
+                alert('Вы ввели не число');
+            } else if (guess < 1 || guess > max - 1) {
+                alert('Это число выходит за рамки задачи!');
+            } else if (guess < n) {
+                alert('Больше');
+            } else if (guess > n) {
+                alert('Меньше');
+            } else if (guess == n) {
+                alert(`Вы угадали! шагов: ${i}`);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Loading, please wait...</p>
+</body>
+</html>
